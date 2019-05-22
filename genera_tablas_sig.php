@@ -17,17 +17,41 @@ require_once 'config.php';
 
 //Listado de tablas a procesar
 $aTablas = array();
-/*
-$aTablas[] = 'cartas_100000';
-$aTablas[] = 'cartas_25000';
-$aTablas[] = 'cartas_250000';
-$aTablas[] = 'cartas_50000';
-$aTablas[] = 'cartas_500000';
-*/
-$aTablas[] = 'isla';
 
 
+//Listado de tablas a procesar
+$aTablas = array();
 
+$aTablas[] = 'area_protegida';
+$aTablas[] = 'areas_de_aguas_continentales';
+$aTablas[] = 'areas_de_asentamientos_y_edificios';
+$aTablas[] = 'areas_de_fabricacion_y_procesamiento';
+$aTablas[] = 'areas_de_glaciologia';
+$aTablas[] = 'areas_de_transporte_aereo';
+$aTablas[] = 'areas_de_zona_costera';
+$aTablas[] = 'controles';
+$aTablas[] = 'cultura_y_religion';
+$aTablas[] = 'departamento';
+$aTablas[] = 'estructuras_operativas_y_defensivas';
+$aTablas[] = 'instalacion_militar';
+$aTablas[] = 'linea_de_limite';
+$aTablas[] = 'lineas_de_aguas_continentales';
+$aTablas[] = 'lineas_de_transporte_ferroviario';
+$aTablas[] = 'lineas_de_zona_costera';
+$aTablas[] = 'provincia';
+$aTablas[] = 'puntos_de_asentamientos_y_edificios';
+$aTablas[] = 'puntos_de_ciencia_y_educacion';
+$aTablas[] = 'puntos_de_comunicacion';
+$aTablas[] = 'puntos_de_energia';
+$aTablas[] = 'puntos_de_extraccion';
+$aTablas[] = 'puntos_de_geomorfologia';
+$aTablas[] = 'puntos_de_glaciologia';
+$aTablas[] = 'puntos_de_puertos_y_muelles';
+$aTablas[] = 'puntos_de_transporte_aereo';
+$aTablas[] = 'puntos_de_transporte_ferroviario';
+$aTablas[] = 'salud';
+$aTablas[] = 'vial';
+$aTablas[] = 'zona_de_frontera';
 
 // Conectando y seleccionado la base de datos  
 $dbconn = pg_connect("host=".$sDBHost." dbname=".$sDBName." user=".$sDBUsr." password=".$sDBPsw)

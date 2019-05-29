@@ -95,4 +95,6 @@ INSERT INTO dominio VALUES ('ISIC', 'Tipo de industria', 'Clasificación de acti
 --
 -- PostgreSQL database dump complete
 --
-
+-- Dominios fuera del catalago
+INSERT INTO dominio VALUES ('DEN_ESC', 'denominacion_escala', 'desnormalizacion fuera de catalogo', NULL , NULL);
+INSERT INTO dominio VALUES ('RE', 'referencia_espacial', 'desnormalizacion fuera de catalogo', NULL , NULL);

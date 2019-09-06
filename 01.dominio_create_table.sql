@@ -1,8 +1,8 @@
--- Table: public.dominio
+-- Table: desnormalizacion.dominio
 
--- DROP TABLE IF EXISTS public.dominio;
+-- DROP TABLE IF EXISTS desnormalizacion.dominio;
 
-CREATE TABLE public.dominio
+CREATE TABLE desnormalizacion.dominio
 (
     codigo character varying(12) COLLATE pg_catalog."default" NOT NULL,
     etiqueta character varying COLLATE pg_catalog."default" NOT NULL,
@@ -16,11 +16,11 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE public.dominio
+ALTER TABLE desnormalizacion.dominio
     OWNER to postgres;
 
-GRANT ALL ON TABLE public.dominio TO postgres;
+GRANT ALL ON TABLE desnormalizacion.dominio TO postgres;
 
-GRANT SELECT ON TABLE public.dominio TO readonly WITH GRANT OPTION;
+GRANT SELECT ON TABLE desnormalizacion.dominio TO readonly WITH GRANT OPTION;
 
-GRANT SELECT ON TABLE public.dominio TO readonly;
+GRANT SELECT ON TABLE desnormalizacion.dominio TO readonly;

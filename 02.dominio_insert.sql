@@ -9,12 +9,12 @@
 
 -- Registros a importar a la tabla dominio.
 
-SET search_path = public, pg_catalog;
+SET search_path = desnormalizacion, pg_catalog;
 
 --
 -- TOC entry 4620 (class 0 OID 263076)
 -- Dependencies: 203
--- Data for Name: dominio; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: dominio; Type: TABLE DATA; Schema: desnormalizacion; Owner: postgres
 --
 
 INSERT INTO dominio VALUES ('ATV ', 'Tipo de tránsito aéreo', 'Tipo de tránsito aéreo según su actividad sea civil o militar.', 'Cadena de caracteres', 'ATV');
@@ -96,5 +96,5 @@ INSERT INTO dominio VALUES ('ISIC', 'Tipo de industria', 'Clasificación de acti
 -- PostgreSQL database dump complete
 --
 -- Dominios fuera del catalago
-INSERT INTO dominio VALUES ('DEN_ESC', 'denominacion_escala', 'desnormalizacion fuera de catalogo', NULL , NULL);
-INSERT INTO dominio VALUES ('RE', 'referencia_espacial', 'desnormalizacion fuera de catalogo', NULL , NULL);
+INSERT INTO dominio VALUES ('DEN_ESC', 'denominacion_escala', 'desnormalizacion fuera de desnormalizacion', NULL , NULL);
+INSERT INTO dominio VALUES ('RE', 'referencia_espacial', 'desnormalizacion fuera de desnormalizacion', NULL , NULL);

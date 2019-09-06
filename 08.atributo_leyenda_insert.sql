@@ -8,7 +8,7 @@
 
 -- Started on 2019-05-02 15:03:30
 
-SET search_path = public, pg_catalog;
+SET search_path = desnormalizacion, pg_catalog;
 
 --
 -- TOC entry 4620 (class 0 OID 263139)

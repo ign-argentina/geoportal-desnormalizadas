@@ -9,12 +9,12 @@
 -- Started on 2019-05-03 11:42:23
 
 
-SET search_path = public, pg_catalog;
+SET search_path = desnormalizacion, pg_catalog;
 
 --
 -- TOC entry 4620 (class 0 OID 263084)
 -- Dependencies: 204
--- Data for Name: dominio_valor; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: dominio_valor; Type: TABLE DATA; Schema: desnormalizacion; Owner: postgres
 --
 
 INSERT INTO dominio_valor VALUES ('ATV ', -2, 'No corresponde', NULL);

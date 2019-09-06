@@ -9,7 +9,7 @@
 -- Started on 2019-05-02 13:27:52
 
 
-SET search_path = public, pg_catalog;
+SET search_path = desnormalizacion, pg_catalog;
 
 SET default_tablespace = '';
 --
@@ -44,15 +44,14 @@ ALTER TABLE ONLY atributo
 -- Name: atributo; Type: ACL; Schema: public; Owner: postgres
 --
 
-REVOKE ALL ON TABLE atributo FROM PUBLIC;
-REVOKE ALL ON TABLE atributo FROM postgres;
-GRANT ALL ON TABLE atributo TO postgres;
-GRANT INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE atributo TO readonly;
-GRANT SELECT ON TABLE atributo TO readonly WITH GRANT OPTION;
-GRANT ALL ON TABLE atributo TO operator;
-SET SESSION AUTHORIZATION readonly;
-GRANT SELECT ON TABLE atributo TO readonly;
-RESET SESSION AUTHORIZATION;
+ALTER TABLE desnormalizacion.atributo
+    OWNER to postgres;
+
+GRANT ALL ON TABLE desnormalizacion.atributo TO postgres;
+
+GRANT SELECT ON TABLE desnormalizacion.atributo TO readonly WITH GRANT OPTION;
+
+GRANT SELECT ON TABLE desnormalizacion.atributo TO readonly;
 
 
 -- Completed on 2019-05-02 13:27:52

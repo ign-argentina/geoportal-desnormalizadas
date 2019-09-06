@@ -5,3 +5,4 @@ $sDBHost = '';
 $sDBName = '';
 $sDBUsr = '';
 $sDBPsw = '';
+$sDBSchema = '';

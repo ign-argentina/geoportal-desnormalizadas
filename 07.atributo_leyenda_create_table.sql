@@ -8,7 +8,7 @@
 
 -- Started on 2019-05-02 13:25:24
 
-SET search_path = public, pg_catalog;
+SET search_path = desnormalizacion, pg_catalog;
 
 SET default_tablespace = '';
 
@@ -49,15 +49,14 @@ ALTER TABLE ONLY atributo_leyenda
 -- Name: atributo_leyenda; Type: ACL; Schema: public; Owner: postgres
 --
 
-REVOKE ALL ON TABLE atributo_leyenda FROM PUBLIC;
-REVOKE ALL ON TABLE atributo_leyenda FROM postgres;
-GRANT ALL ON TABLE atributo_leyenda TO postgres;
-GRANT INSERT,REFERENCES,DELETE,TRIGGER,TRUNCATE,UPDATE ON TABLE atributo_leyenda TO sig_readonly;
-GRANT SELECT ON TABLE atributo_leyenda TO readonly WITH GRANT OPTION;
-GRANT ALL ON TABLE atributo_leyenda TO operator;
-SET SESSION AUTHORIZATION readonly;
-GRANT SELECT ON TABLE atributo_leyenda TO readonly;
-RESET SESSION AUTHORIZATION;
+ALTER TABLE desnormalizacion.atributo_leyenda
+    OWNER to postgres;
+
+GRANT ALL ON TABLE desnormalizacion.atributo_leyenda TO postgres;
+
+GRANT SELECT ON TABLE desnormalizacion.atributo_leyenda TO readonly WITH GRANT OPTION;
+
+GRANT SELECT ON TABLE desnormalizacion.atributo_leyenda TO readonly;
 
 
 -- Completed on 2019-05-02 13:25:25

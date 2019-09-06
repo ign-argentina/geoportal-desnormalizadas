@@ -23,6 +23,7 @@ $aTablas = array();
 $aTablas = array();
 
 $aTablas[] = 'public.area_protegida';
+/*
 $aTablas[] = 'public.areas_de_aguas_continentales';
 $aTablas[] = 'public.areas_de_asentamientos_y_edificios';
 $aTablas[] = 'public.areas_de_fabricacion_y_procesamiento';
@@ -52,13 +53,14 @@ $aTablas[] = 'public.puntos_de_transporte_ferroviario';
 $aTablas[] = 'public.salud';
 $aTablas[] = 'public.vial';
 $aTablas[] = 'public.zona_de_frontera';
+*/
 
 // Conectando y seleccionado la base de datos  
 $dbconn = pg_connect("host=".$sDBHost." dbname=".$sDBName." user=".$sDBUsr." password=".$sDBPsw)
     or die('No se ha podido conectar: ' . pg_last_error());
 
 //Obtiene los campos que no debe mostrar en la vista "linda"
-$s = "select codigo from ".$sDBSchema.".atributo_quitar";
+$s = "select codigo from ".$sDBSchemaDomainsData.".atributo_quitar";
 $result2 = pg_query($s) or die('La consulta fallo: ' . pg_last_error().' <br /> '.$s);
 $aCamposNoMostrar = array();
 while ($aItem2 = pg_fetch_array($result2, null, PGSQL_ASSOC)) {
@@ -79,14 +81,14 @@ foreach ($aTablas as $sTabla) {
 	$aCamposFeos = array(); //Los campos que los tiene que dejar como vienen porque se utilizan para SLD
 	
 	//Obtiene los campos correspondientes a atributo leyenda
-	$s = "select codigo from ".$sDBSchema.".atributo_leyenda where tabla = '".$sTablaNombre."' order by orden asc";
+	$s = "select codigo from ".$sDBSchemaDomainsData.".atributo_leyenda where tabla = '".$sTablaNombre."' order by orden asc";
 	$result2 = pg_query($s) or die('La consulta fallo: ' . pg_last_error().' <br /> '.$s);
 	while ($aItem2 = pg_fetch_array($result2, null, PGSQL_ASSOC)) {
 		$aCamposLeyenda[] = $sTablaNombre.'.'.strtolower($aItem2['codigo']);
 	}
 	
 	//Obtiene los campos correspondientes a los atributos feos (para SLD)
-	$s = "select codigo from ".$sDBSchema.".atributo_sld where tabla = '".$sTabla."'";
+	$s = "select codigo from ".$sDBSchemaDomainsData.".atributo_sld where tabla = '".$sTabla."'";
 	$result2 = pg_query($s) or die('La consulta fallo: ' . pg_last_error().' <br /> '.$s);
 	while ($aItem2 = pg_fetch_array($result2, null, PGSQL_ASSOC)) {
 		$aCamposFeos[] = $sTabla.'.'.strtolower($aItem2['codigo']);
@@ -95,7 +97,7 @@ foreach ($aTablas as $sTabla) {
 	$s = "SELECT column_name
 		  FROM information_schema.columns
 		  WHERE table_schema = '".$sTablaEsquema."'
-				AND table_name   = '".$sTabla."'
+				AND table_name   = '".$sTablaNombre."'
 				AND column_name not in ('".join("', '", $aCamposNoMostrar)."')";
 	$result = pg_query($s) or die('La consulta fallo: ' . pg_last_error().' <br /> '.$s);
 	while ($aItem = pg_fetch_array($result, null, PGSQL_ASSOC)) {
@@ -104,21 +106,21 @@ foreach ($aTablas as $sTabla) {
 		if (!in_array($aItem['column_name'], $aCamposLeyenda)) {
 		
 			//Intenta buscar el campo como dominio
-			$s = "select * from ".$sDBSchema.".dominio where codigo = '".strtoupper($aItem['column_name'])."'";
+			$s = "select * from ".$sDBSchemaDomainsData.".dominio where codigo = '".strtoupper($aItem['column_name'])."'";
 			$result2 = pg_query($s) or die('La consulta fallo: ' . pg_last_error().' <br /> '.$s);
 			if ($aItem2 = pg_fetch_array($result2, null, PGSQL_ASSOC)) {
 				$aCamposVista[] = 'dominio_valor_'.$aItem['column_name'].'.valor as '.nombreSHP2NombreTabla($aItem2['etiqueta']);
-				$aJoinsVista[] = 'dominio_valor as dominio_valor_'.$aItem['column_name'].' on (dominio_valor_'.$aItem['column_name'].'.codigo = \''.strtoupper($aItem['column_name']).'\' and dominio_valor_'.$aItem['column_name'].'.clave = '.$sTabla.'.'.$aItem['column_name'].')';
+				$aJoinsVista[] = $sDBSchemaDomainsData.'.dominio_valor as dominio_valor_'.$aItem['column_name'].' on (dominio_valor_'.$aItem['column_name'].'.codigo = \''.strtoupper($aItem['column_name']).'\' and dominio_valor_'.$aItem['column_name'].'.clave = '.$sTabla.'.'.$aItem['column_name'].')';
 			} else {
 				//Intenta buscar el campo como atributo
-				$s = "select * from ".$sDBSchema.".atributo where codigo = '".strtoupper($aItem['column_name'])."'";
+				$s = "select * from ".$sDBSchemaDomainsData.".atributo where codigo = '".strtoupper($aItem['column_name'])."'";
 				if (count($aCamposLeyenda) > 0) {
 					$s .= " and etiqueta != 'Leyenda'";
 				}
 				$result2 = pg_query($s) or die('La consulta fallo: ' . pg_last_error().' <br /> '.$s);
 				if ($aItem2 = pg_fetch_array($result2, null, PGSQL_ASSOC)) {
 					$aCamposVista[] = $sTablaNombre.'.'.$aItem['column_name'].' as '.nombreSHP2NombreTabla($aItem2['etiqueta']);
-					$aJoinsVista[] = 'atributo as atributo_'.$aItem['column_name'].' on (atributo_'.$aItem['column_name'].'.codigo = \''.strtoupper($aItem['column_name']).'\')';
+					$aJoinsVista[] = $sDBSchemaDomainsData.'.atributo as atributo_'.$aItem['column_name'].' on (atributo_'.$aItem['column_name'].'.codigo = \''.strtoupper($aItem['column_name']).'\')';
 				} else {
 					$aCamposVista[] = $sTablaNombre.'.'.$aItem['column_name'];
 				}
@@ -135,6 +137,7 @@ foreach ($aTablas as $sTabla) {
 	die;
 	*/
 	
+	
 	$aVista = array();
 	$aVista[] = 'SELECT ';
 	if (count($aCamposLeyenda) > 0) {
@@ -149,16 +152,16 @@ foreach ($aTablas as $sTabla) {
 		$aVista[] = 'LEFT JOIN '.join("\nLEFT JOIN ", $aJoinsVista);
 	}
 	
-	$sVista = 'DROP TABLE IF EXISTS catalogo.sig_'.$sTabla.';';
-	$sVista .= "\n".'CREATE TABLE catalogo.sig_'.$sTabla.' AS '.join("\n", $aVista).';';
-	$sVista .= "\n".'ALTER TABLE sig_'.$sTabla.' ADD CONSTRAINT pk_sig_'.$sTabla.' PRIMARY KEY (gid);';
+	$sVista = 'DROP TABLE IF EXISTS '.$sDBSchemaCatalog.'.sig_'.$sTablaNombre.';';
+	$sVista .= "\n".'CREATE TABLE '.$sDBSchemaCatalog.'.sig_'.$sTablaNombre.' AS '.join("\n", $aVista).';';
+	$sVista .= "\n".'ALTER TABLE '.$sDBSchemaCatalog.'.sig_'.$sTablaNombre.' ADD CONSTRAINT pk_sig_'.$sTablaNombre.' PRIMARY KEY (gid);';
 	/*
-	$sVista .= "\n".'GRANT ALL ON TABLE catalogo.sig_'.$sTabla.' TO postgres;';
-	$sVista .= "\n".'GRANT ALL ON TABLE catalogo.sig_'.$sTabla.' TO sig_readonly;';
-	$sVista .= "\n".'GRANT ALL ON TABLE catalogo.sig_'.$sTabla.' TO sig_operator;';
+	$sVista .= "\n".'GRANT ALL ON TABLE '.$sDBSchemaCatalog.'.sig_'.$sTabla.' TO postgres;';
+	$sVista .= "\n".'GRANT ALL ON TABLE '.$sDBSchemaCatalog.'.sig_'.$sTabla.' TO sig_readonly;';
+	$sVista .= "\n".'GRANT ALL ON TABLE '.$sDBSchemaCatalog.'.sig_'.$sTabla.' TO sig_operator;';
 	*/
 	foreach ($aDBGrantUsers as $sGrantUser) { //Recorre el vector de usuarios y le asigna permisos sobre la tabla creada
-		$sVista .= "\n".'GRANT ALL ON TABLE catalogo.sig_'.$sTabla.' TO '.$sGrantUser.';';
+		$sVista .= "\n".'GRANT ALL ON TABLE '.$sDBSchemaCatalog.'.sig_'.$sTablaNombre.' TO '.$sGrantUser.';';
 	}
 	//die($sVista);
 	

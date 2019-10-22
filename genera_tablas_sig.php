@@ -22,38 +22,62 @@ $aTablas = array();
 //Listado de tablas a procesar
 $aTablas = array();
 
-$aTablas[] = 'public.area_protegida';
-/*
-$aTablas[] = 'public.areas_de_aguas_continentales';
-$aTablas[] = 'public.areas_de_asentamientos_y_edificios';
-$aTablas[] = 'public.areas_de_fabricacion_y_procesamiento';
-$aTablas[] = 'public.areas_de_glaciologia';
-$aTablas[] = 'public.areas_de_transporte_aereo';
-$aTablas[] = 'public.areas_de_zona_costera';
-$aTablas[] = 'public.controles';
-$aTablas[] = 'public.cultura_y_religion';
-$aTablas[] = 'public.departamento';
+$aTablas[] = 'externos.bahra_v2';
+$aTablas[] = 'public.hojas100';
+$aTablas[] = 'public.hojas025';
+$aTablas[] = 'public.hojas250';
+$aTablas[] = 'public.hojas050';
+$aTablas[] = 'public.hojas500';
 $aTablas[] = 'public.estructuras_operativas_y_defensivas';
 $aTablas[] = 'public.instalacion_militar';
-$aTablas[] = 'public.linea_de_limite';
-$aTablas[] = 'public.lineas_de_aguas_continentales';
-$aTablas[] = 'public.lineas_de_transporte_ferroviario';
-$aTablas[] = 'public.lineas_de_zona_costera';
-$aTablas[] = 'public.provincia';
+$aTablas[] = 'externos.area_vuelos_dsr';
+$aTablas[] = 'externos.area_vuelos_vant';
+$aTablas[] = 'geodesia.geodesia_ramsac_web';
+$aTablas[] = 'geodesia.geodesia_altimetria';
+$aTablas[] = 'geodesia.geodesia_planimetria';
+$aTablas[] = 'geodesia.geodesia_gravimetria';
+$aTablas[] = 'public.v_asentamientos_humanos';
 $aTablas[] = 'public.puntos_de_asentamientos_y_edificios';
+$aTablas[] = 'public.cultura_y_religion';
+$aTablas[] = 'public.salud';
 $aTablas[] = 'public.puntos_de_ciencia_y_educacion';
+$aTablas[] = 'public.areas_de_asentamientos_y_edificios';
+$aTablas[] = 'public.lineas_de_zona_costera';
+$aTablas[] = 'public.areas_de_aguas_continentales';
+$aTablas[] = 'public.lineas_de_aguas_continentales';
+$aTablas[] = 'public.areas_de_zona_costera';
+$aTablas[] = 'public.puntos_de_puertos_y_muelles';
 $aTablas[] = 'public.puntos_de_comunicacion';
+$aTablas[] = 'public.areas_de_fabricacion_y_procesamiento';
 $aTablas[] = 'public.puntos_de_energia';
 $aTablas[] = 'public.puntos_de_extraccion';
+$aTablas[] = 'public.area_protegida';
+$aTablas[] = 'public.departamento';
+$aTablas[] = 'public.linea_de_limite';
+$aTablas[] = 'public.provincia';
+$aTablas[] = 'public.zona_de_frontera';
+$aTablas[] = 'geodesia.geodesia_mde';
 $aTablas[] = 'public.puntos_de_geomorfologia';
+$aTablas[] = 'public.areas_de_glaciologia';
 $aTablas[] = 'public.puntos_de_glaciologia';
-$aTablas[] = 'public.puntos_de_puertos_y_muelles';
+$aTablas[] = 'public.areas_de_transporte_aereo';
 $aTablas[] = 'public.puntos_de_transporte_aereo';
 $aTablas[] = 'public.puntos_de_transporte_ferroviario';
-$aTablas[] = 'public.salud';
+$aTablas[] = 'public.lineas_de_transporte_ferroviario';
+$aTablas[] = 'public.controles';
 $aTablas[] = 'public.vial';
-$aTablas[] = 'public.zona_de_frontera';
-*/
+$aTablas[] = 'public.lineas_de_geomorfologia';
+$aTablas[] = 'public.mar_territorial_argentino';
+$aTablas[] = 'public.municipio';
+$aTablas[] = 'public.pais';
+$aTablas[] = 'public.plataforma_continental';
+$aTablas[] = 'geodesia.geodesia_altimetria_catlgv3';
+$aTablas[] = 'geodesia.geodesia_geocentrica';
+$aTablas[] = 'geodesia.geodesia_gravimetria_catlgv3';
+$aTablas[] = 'geodesia.geodesia_ramsac';
+$aTablas[] = 'public.zona_contigua_argentina';
+$aTablas[] = 'public.zona_economica_exclusiva_argentina';
+
 
 // Conectando y seleccionado la base de datos  
 $dbconn = pg_connect("host=".$sDBHost." dbname=".$sDBName." user=".$sDBUsr." password=".$sDBPsw)

@@ -77,6 +77,23 @@ INSERT INTO atributo VALUES ('RTN', 'Designación de red vial', 'Identificación
 INSERT INTO atributo VALUES ('SAG', 'Autoridad de fuente', 'Nombre de la autoridad responsable de la información utilizada.', 'Cadena de caracteres', 'SAG');
 INSERT INTO atributo VALUES ('TAO', 'Tipo de accidente submarino', 'Clasificación del relieve submarino.', 'Cadena de caracteres', '-  ');
 INSERT INTO atributo VALUES ('ULV', 'Última visita', 'Fecha de la última visita realizada al punto geodésico,  acorde al formato establecido en la Norma ISO 8601:2000 5.2.1.1, donde [AAAA] representa un año calendario, [MM] el número ordinal de un mes natural en el año calendario, [DD] el número ordinal de un día dentro del mes calendario.', 'Cadena de caracteres', '-  ');
+INSERT INTO atributo VALUES ('COD_PCIA', 'codigo_indec_provincia', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('NOM_PCIA', 'nombre_provincia', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('COD_DEPTO', 'codigo_indec_departamento', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('NOM_DEPTO', 'nombre_departamento', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('COD_ASE', 'codigo_asentamiento', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('NOMBRE', 'nombre_geografico', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('TIPO', 'tipo_asentamiento', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('COD_AGLO', 'codigo_aglomerado', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('NOM_AGLO', 'nombre_aglomerado', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('COD_AGL', 'codigo_indec_gobierno_local', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('NOM_AGL', 'nombre_gobierno_local', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('LAT_GD', 'latitud_grado_decimal', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('LONG_GD', 'longitud_grado_decimal', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('LAT_GS', 'latitud_grado_sexagecimal', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('LONG_GS', 'longitud_grado_sexagecimal', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('FUENTE', 'fuente_ubicacion', 'Desnormalización BAHRA', null, null);
+
 
 
 -- Completed on 2019-05-02 14:48:43

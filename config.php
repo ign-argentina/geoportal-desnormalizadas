@@ -7,3 +7,10 @@ $sDBUsr = '';
 $sDBPsw = '';
 $sDBSchemaDomainsData = ''; //Esquema de la base de datos donde se encuentran los datos necesarios para el proceso de desnormalización (dominio y dominio_valor)
 $sDBSchemaCatalog = ''; //Esquema donde se crearan las tablas desnormalizadas
+
+//Usuarios dueño de las tablas
+$sDBOwner = '';
+
+//Usuarios que deben estar asignados a las tablas
+$aDBGrantUsers = array();
+$aDBGrantUsers['nombreusuario'] = 'privilegio';

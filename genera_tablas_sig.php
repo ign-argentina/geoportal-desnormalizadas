@@ -170,13 +170,10 @@ foreach ($aTablas as $sTabla) {
 	$sVista = 'DROP TABLE IF EXISTS '.$sDBSchemaCatalog.'.sig_'.$sTablaNombre.';';
 	$sVista .= "\n".'CREATE TABLE '.$sDBSchemaCatalog.'.sig_'.$sTablaNombre.' AS '.join("\n", $aVista).';';
 	$sVista .= "\n".'ALTER TABLE '.$sDBSchemaCatalog.'.sig_'.$sTablaNombre.' ADD CONSTRAINT pk_sig_'.$sTablaNombre.' PRIMARY KEY (gid);';
-	/*
-	$sVista .= "\n".'GRANT ALL ON TABLE '.$sDBSchemaCatalog.'.sig_'.$sTabla.' TO postgres;';
-	$sVista .= "\n".'GRANT ALL ON TABLE '.$sDBSchemaCatalog.'.sig_'.$sTabla.' TO sig_readonly;';
-	$sVista .= "\n".'GRANT ALL ON TABLE '.$sDBSchemaCatalog.'.sig_'.$sTabla.' TO sig_operator;';
-	*/
-	foreach ($aDBGrantUsers as $sGrantUser) { //Recorre el vector de usuarios y le asigna permisos sobre la tabla creada
-		$sVista .= "\n".'GRANT ALL ON TABLE '.$sDBSchemaCatalog.'.sig_'.$sTablaNombre.' TO '.$sGrantUser.';';
+	
+	$sVista .= "\n".'ALTER TABLE '.$sDBSchemaCatalog.'.sig_'.$sTablaNombre.' OWNER to '.$sDBOwner.';';
+	foreach ($aDBGrantUsers as $sGrantUser => $sPrivilege) { //Recorre el vector de usuarios y le asigna permisos sobre la tabla creada
+		$sVista .= "\n".'GRANT '.$sPrivilege.' ON TABLE '.$sDBSchemaCatalog.'.sig_'.$sTablaNombre.' TO '.$sGrantUser.';';
 	}
 	//die($sVista);
 	

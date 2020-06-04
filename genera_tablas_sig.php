@@ -70,6 +70,7 @@ $aTablas[] = 'public.zona_contigua_argentina';
 $aTablas[] = 'public.zona_economica_exclusiva_argentina';
 $aTablas[] = 'externos.calle';
 $aTablas[] = 'externos.red_vial_nacional_dnv';
+$aTablas[] = 'externos.gobiernoslocales_2020';
 
 // Conectando y seleccionado la base de datos  
 $dbconn = pg_connect("host=".$sDBHost." dbname=".$sDBName." user=".$sDBUsr." password=".$sDBPsw)

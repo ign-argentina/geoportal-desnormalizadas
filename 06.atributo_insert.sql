@@ -93,6 +93,24 @@ INSERT INTO atributo VALUES ('LONG_GD', 'longitud_grado_decimal', 'Desnormalizac
 INSERT INTO atributo VALUES ('LAT_GS', 'latitud_grado_sexagecimal', 'Desnormalización BAHRA', null, null);
 INSERT INTO atributo VALUES ('LONG_GS', 'longitud_grado_sexagecimal', 'Desnormalización BAHRA', null, null);
 INSERT INTO atributo VALUES ('FUENTE', 'fuente_ubicacion', 'Desnormalización BAHRA', null, null);
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('TGL','tipo_gobierno_local','Desnormalización Gobierno Local');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('COD_TGL','codigo_tipo_gobierno_local','Desnormalización Gobierno Local');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('NAM_DPTO','departamento','Desnormalización Gobierno Local');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('COD_DPTO','codigo_departamento','Desnormalización Gobierno Local');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('NAM_PROV','provincia','Desnormalización Gobierno Local');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('COD_PROV','codigo_provinicia','Desnormalización Gobierno Local');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('CARAC','caracteristica_de_hoja','Desnormalización Carta');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('ORIGEN_DEL','origen_del_dato','Desnormalización Carta');
+INSERT INTO atributo VALUES ('GNA1', 'Término genéricos', 'Parte del nombre geográfico que indica el tipo de objeto que identifica. Ejemplo: río, monte, glaciar, establecimiento.', 'Cadena de caracteres', 'GNA');
+INSERT INTO atributo VALUES ('NAM1', 'Término específicos', 'Parte de un nombre geográfico que acompaña al término genérico y que identifica e individualiza un objeto geográfico determinado. Ejemplo: Paraná en río Paraná; Upsala en glaciar Upsala; Las Marías en establecimiento Las Marías; Esperanza en el caso de bahía Esperanza.', 'Cadena de caracteres', 'NAM');
 
 
 

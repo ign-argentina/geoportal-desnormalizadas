@@ -104,7 +104,7 @@ insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
 ('NAM_PROV','provincia','Desnormalización Gobierno Local');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
-('COD_PROV','codigo_provinicia','Desnormalización Gobierno Local');
+('COD_PROV','codigo_provincia','Desnormalización Gobierno Local');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
 ('CARAC','caracteristica_de_hoja','Desnormalización Carta');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values

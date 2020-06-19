@@ -21,7 +21,7 @@ INSERT INTO atributo VALUES ('FNA1', 'Nombre geográfico', 'Nombre completo que 
 INSERT INTO atributo VALUES ('FNA2', 'Nombre geográfico 2', 'Nombre completo que se utiliza para designar un objeto en un mapa o carta. Está formado por el término genérico y el término específico. Ejemplo: río Mendoza.', 'Cadena de caracteres', 'FNA');
 INSERT INTO atributo VALUES ('CER', 'Código de estación RAMSAC', 'Código alfanumérico que identifica a cada estación GPS/GNSS permanente de la Red RAMSAC.', 'Cadena de caracteres', NULL);
 INSERT INTO atributo VALUES ('TIS', 'Tipo de isla', 'Clasificación de isla según las características de la masa de agua que la rodea.', 'Cadena de caracteres', NULL);
-INSERT INTO atributo VALUES ('OBJETO', 'Leyenda', NULL, NULL, NULL);
+-- INSERT INTO atributo VALUES ('OBJETO', 'Leyenda', NULL, NULL, NULL);
 INSERT INTO atributo VALUES ('AEL', 'Altura elipsoidal', 'Altura elipsoidal referida al marco de referencia geodésico nacional.', 'Numérico', '-  ');
 INSERT INTO atributo VALUES ('AI1', 'Año de instalación', 'Establecimiento del año de instalación de una estación GPS/GNSS permanente de RAMSAC.', 'Fecha', '-  ');
 INSERT INTO atributo VALUES ('ALT', 'Altitud', 'Altura de elevación respecto al nivel medio del mar (cota).', 'Numérico', '-  ');

@@ -111,7 +111,16 @@ insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
 ('ORIGEN_DEL','origen_del_dato','Desnormalización Carta');
 INSERT INTO atributo VALUES ('GNA1', 'Término genéricos', 'Parte del nombre geográfico que indica el tipo de objeto que identifica. Ejemplo: río, monte, glaciar, establecimiento.', 'Cadena de caracteres', 'GNA');
 INSERT INTO atributo VALUES ('NAM1', 'Término específicos', 'Parte de un nombre geográfico que acompaña al término genérico y que identifica e individualiza un objeto geográfico determinado. Ejemplo: Paraná en río Paraná; Upsala en glaciar Upsala; Las Marías en establecimiento Las Marías; Esperanza en el caso de bahía Esperanza.', 'Cadena de caracteres', 'NAM');
-
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('NUM_PROYEC','numero_proyecto','Desnormalización Vuelos VANT');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('NOMBRE_IGN','nombre','Desnormalización Vuelos VANT');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('FECHA_VUEL','fecha_vuelo','Desnormalización Vuelos VANT');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('CANT_FOTOS','cantidad_fotos','Desnormalización Vuelos VANT');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
+('ANIO','data','Desnormalización Vuelos VANT');
 
 
 -- Completed on 2019-05-02 14:48:43

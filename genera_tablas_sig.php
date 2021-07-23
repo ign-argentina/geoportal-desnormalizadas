@@ -2,7 +2,7 @@
 
 /*********************************
 Genera las tablas  para mostrar los datos SIG "lindos" porque QGIS (y WFS) no funciona correctamente con vistas.
-Los atributos los transforma tomando datos del catálogo IGN el cual se importó a la base de datos en las tablas:
+Los atributos los transforma tomando datos del catï¿½logo IGN el cual se importï¿½ a la base de datos en las tablas:
 - atributo_quitar: campos que no debe mostrar en la vista "linda"
 - atributo_sld: campos correspondientes a los atributos feos (para SLD) y que deben dejarse
 - atributo_leyenda: campos correspondientes a atributo leyenda
@@ -195,55 +195,53 @@ function nombreSHP2NombreTabla($sSHP) {
 	$string = trim($string);
  
     $string = str_replace(
-        array('á', 'à', 'ä', 'â', 'ª', 'Á', 'À', 'Â', 'Ä'),
+        array('Ã¡', 'Ã ', 'Ã¤', 'Ã¢', 'Âª', 'Ã', 'Ã€', 'Ã‚', 'Ã„'),
         array('a', 'a', 'a', 'a', 'a', 'A', 'A', 'A', 'A'),
         $string
     );
  
     $string = str_replace(
-        array('é', 'è', 'ë', 'ê', 'É', 'È', 'Ê', 'Ë'),
+        array('Ã©', 'Ã¨', 'Ã«', 'Ãª', 'Ã‰', 'Ãˆ', 'ÃŠ', 'Ã‹'),
         array('e', 'e', 'e', 'e', 'E', 'E', 'E', 'E'),
         $string
     );
  
     $string = str_replace(
-        array('í', 'ì', 'ï', 'î', 'Í', 'Ì', 'Ï', 'Î'),
+        array('Ã­', 'Ã¬', 'Ã¯', 'Ã®', 'Ã', 'ÃŒ', 'Ã', 'Ã'),
         array('i', 'i', 'i', 'i', 'I', 'I', 'I', 'I'),
         $string
     );
  
     $string = str_replace(
-        array('ó', 'ò', 'ö', 'ô', 'Ó', 'Ò', 'Ö', 'Ô'),
+        array('Ã³', 'Ã²', 'Ã¶', 'Ã´', 'Ã“', 'Ã’', 'Ã–', 'Ã”'),
         array('o', 'o', 'o', 'o', 'O', 'O', 'O', 'O'),
         $string
     );
  
     $string = str_replace(
-        array('ú', 'ù', 'ü', 'û', 'Ú', 'Ù', 'Û', 'Ü'),
+        array('Ãº', 'Ã¹', 'Ã¼', 'Ã»', 'Ãš', 'Ã™', 'Ã›', 'Ãœ'),
         array('u', 'u', 'u', 'u', 'U', 'U', 'U', 'U'),
         $string
     );
  
     $string = str_replace(
-        array('ñ', 'Ñ', 'ç', 'Ç'),
+        array('Ã±', 'Ã‘', 'Ã§', 'Ã‡'),
         array('n', 'N', 'c', 'C',),
         $string
     );
  
-    //Esta parte se encarga de eliminar cualquier caracter extraño
+    //Esta parte se encarga de eliminar cualquier caracter extraï¿½o
     $string = str_replace(
-        array('º', '-', '~',
-             '#', '@', '|', '!', '"',
-             '·', '$', '%', '&', '/',
-             '(', ')', '?', '\'', '¡',
-             '¿', '[', '^', '<code>', ']',
-             '+', '}', '{', '¨', '´',
-             '>', '< ', ';', ',', ':'),
+        array('Âº', '-', '~',
+		'#', '@', '|', '!', '"',
+		'Â·', '$', '%', '&', '/',
+		'(', ')', '?', '\'', 'Â¡',
+		'Â¿', '[', '^', '<code>', ']',
+		'+', '}', '{', 'Â¨', 'Â´',
+		'>', '< ', ';', ',', ':'),
         '',
         $string
     );
 	
 	return $string;
 }
-
-?>

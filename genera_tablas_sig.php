@@ -124,7 +124,8 @@ foreach ($aTablas as $sTabla) {
 }
 
 //Ejecutar el script generado
-pg_query(file_get_contents('tablas_sig.sql')) or die('La consulta fallo: ' . pg_last_error().' <br /> '.$s);
+//pg_query(file_get_contents('tablas_sig.sql')) or die('La consulta fallo: ' . pg_last_error().' <br /> '.$s);
+pg_query(utf8_encode(file_get_contents('tablas_sig.sql'))) or die('La consulta fallo: ' . pg_last_error().' <br /> '.$s);
 
 function nombreSHP2NombreTabla($sSHP) {
 	$sSHP = utf8_decode($sSHP);

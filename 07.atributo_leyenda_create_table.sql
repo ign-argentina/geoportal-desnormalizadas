@@ -50,9 +50,9 @@ ALTER TABLE ONLY atributo_leyenda
 --
 
 ALTER TABLE desnormalizacion.atributo_leyenda
-    OWNER to postgres;
+    OWNER to admins;
 
-GRANT ALL ON TABLE desnormalizacion.atributo_leyenda TO postgres;
+GRANT ALL ON TABLE desnormalizacion.atributo_leyenda TO admins;
 
 GRANT SELECT ON TABLE desnormalizacion.atributo_leyenda TO readonly WITH GRANT OPTION;
 

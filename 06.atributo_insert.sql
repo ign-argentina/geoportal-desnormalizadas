@@ -122,6 +122,38 @@ insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
 ('ANIO','data','Desnormalización Vuelos VANT');
 
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('CAM','clasificacion_area','clasificacion_area');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('TYP','tipo_ de_via_de_transporte','tipo_ de_via_de_transporte');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('RST','tipo_de_superficie de_via','tipo_de_superficie de_via');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('JER','jerarquia','jerarquia');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('HCT','jurisdiccion_de_via_de_transporte','jurisdiccion_de_via_de_transporte');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('COD_PFI','codigo_paso_de_frontera_internacional','codigo_paso_de_frontera_internacional');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('NOM_PFI','nombre_paso_de_frontera_internacional','nombre_paso_de_frontera_internacional');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('CAT_PFI','cotegoria_paso_de_frontera_internacional','cotegoria_paso_de_frontera_internacional');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('PRES_ACI','presencia_area_control_integrado','presencia_area_control_integrado');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('TIPO_ACI','tipo_area_control_integrado','tipo_area_control_integrado');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('PRES_CF','presencia_complejo_fronterizo','presencia_complejo_fronterizo');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('CANT_CF','cantidad_complejos_fronterizos','cantidad_complejos_fronterizos');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('REGION','region','region');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('NOM_ADF','nombre_area_de_desarrollo_de_frontera','nombre_area_de_desarrollo_de_frontera');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('NUM_ADF','numero_area_de_desarrollo_de_frontera','numero_area_de_desarrollo_de_frontera');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('PROV','provincia','provincia');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('DEPTO','departamento','departamento');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('MUNI','municipio','municipio');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LAT_PFI','latitud_pfi','latitud_pfi');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LON_PFI','longitud_pfi','longitud_pfi');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('CRUCE_PFI','tipo_pase_segun_cruce','tipo_pase_segun_cruce');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('HAB_MIGR','habilitacion_migratoria','habilitacion_migratoria');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('MOD_MIGR','modalidad','modalidad');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('ESPEC','especialidad','especialidad');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('AUTORIDAD','autoridad_de_coordinacion','autoridad_de_coordinacion');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('FFSS_ARG','fuerza_de_seguridad','fuerza_de_seguridad');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('PVECINO','pais_vecino','pais_vecino');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('COD_CF','codigo_ complejo_ fronterizo','codigo_ complejo_ fronterizo');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('NOM_CF','nombre_complejo_ fronterizo','nombre_complejo_ fronterizo');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LAT_CF','latitud_cf','latitud_cf');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LON_CF','longitud_cf','longitud_cf');
+
 
 -- Completed on 2019-05-02 14:48:43
 

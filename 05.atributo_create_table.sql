@@ -45,9 +45,9 @@ ALTER TABLE ONLY atributo
 --
 
 ALTER TABLE desnormalizacion.atributo
-    OWNER to postgres;
+    OWNER to admins;
 
-GRANT ALL ON TABLE desnormalizacion.atributo TO postgres;
+GRANT ALL ON TABLE desnormalizacion.atributo TO admins;
 
 GRANT SELECT ON TABLE desnormalizacion.atributo TO readonly WITH GRANT OPTION;
 

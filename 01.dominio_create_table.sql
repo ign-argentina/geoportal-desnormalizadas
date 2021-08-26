@@ -16,10 +16,10 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE desnormalizacion.dominio
-    OWNER to postgres;
+ALTER TABLE externos.area_vuelos_dsr
+    OWNER to admins;
 
-GRANT ALL ON TABLE desnormalizacion.dominio TO postgres;
+GRANT ALL ON TABLE externos.area_vuelos_dsr TO admins;
 
 GRANT SELECT ON TABLE desnormalizacion.dominio TO readonly WITH GRANT OPTION;
 

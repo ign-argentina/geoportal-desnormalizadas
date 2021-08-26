@@ -36,9 +36,9 @@ ALTER TABLE ONLY atributo_quitar
 --
 
 ALTER TABLE desnormalizacion.atributo_quitar
-    OWNER to postgres;
+    OWNER to admins;
 
-GRANT ALL ON TABLE desnormalizacion.atributo_quitar TO postgres;
+GRANT ALL ON TABLE desnormalizacion.atributo_quitar TO admins;
 
 GRANT SELECT ON TABLE desnormalizacion.atributo_quitar TO readonly WITH GRANT OPTION;
 

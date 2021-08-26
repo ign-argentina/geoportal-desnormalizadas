@@ -39,9 +39,9 @@ ALTER TABLE ONLY desnormalizacion.dominio_valor
 --
 
 ALTER TABLE desnormalizacion.dominio_valor
-    OWNER to postgres;
+    OWNER to admins;
 
-GRANT ALL ON TABLE desnormalizacion.dominio_valor TO postgres;
+GRANT ALL ON TABLE desnormalizacion.dominio_valor TO admins;
 
 GRANT SELECT ON TABLE desnormalizacion.dominio_valor TO readonly WITH GRANT OPTION;
 

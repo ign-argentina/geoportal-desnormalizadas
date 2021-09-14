@@ -154,6 +154,25 @@ insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('NOM_
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LAT_CF','latitud_cf','latitud_cf');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LON_CF','longitud_cf','longitud_cf');
 
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('NOMBRE_ANT','nombre_anterior','nombre_anterior');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('FECHA_EDIC','fecha_edicion','fecha_edicion');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('FECHA_LEV_','fecha_levantamiento_o_compilacion','fecha_levantamiento_o_compilacion');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('TIPO_LEV_C','tipo_levantamiento_o_compilacion','tipo_levantamiento_o_compilacion');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('MARCO_DE_R','marco_de_referencia','marco_de_referencia');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('SIST_DE_PR','sistema_de_proyeccion','sistema_de_proyeccion');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('NUM_FAJA','numero_faja','numero_faja');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('MERIDIANO_','meridiano','meridiano');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('ELIPSOIDE','elipsoide','elipsoide');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('CODIGO_INT','codigo_interno','codigo_interno');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LAT_NO','latitud_no','latitud_no');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LON_NO','longitud_no','longitud_no');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LAT_NE','latitud_ne','latitud_ne');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LON_NE','longitud_ne','longitud_ne');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LAT_SO','latitud_so','latitud_so');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LON_SO','longitud_so','longitud_so');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LAT_SE','latitud_se','latitud_se');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LON_SE','longitud_se','longitud_se');
+
 
 -- Completed on 2019-05-02 14:48:43
 

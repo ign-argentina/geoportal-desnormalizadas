@@ -123,7 +123,7 @@ insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
 ('ANIO','data','Desnormalización Vuelos VANT');
 
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('CAM','clasificacion_area','clasificacion_area');
-insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('TYP','tipo_ de_via_de_transporte','tipo_ de_via_de_transporte');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('TYP','tipo_de_via_de_transporte','tipo_ de_via_de_transporte');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('RST','tipo_de_superficie de_via','tipo_de_superficie de_via');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('JER','jerarquia','jerarquia');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('HCT','jurisdiccion_de_via_de_transporte','jurisdiccion_de_via_de_transporte');

@@ -149,8 +149,8 @@ insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('ESPE
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('AUTORIDAD','autoridad_de_coordinacion','autoridad_de_coordinacion');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('FFSS_ARG','fuerza_de_seguridad','fuerza_de_seguridad');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('PVECINO','pais_vecino','pais_vecino');
-insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('COD_CF','codigo_ complejo_ fronterizo','codigo_ complejo_ fronterizo');
-insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('NOM_CF','nombre_complejo_ fronterizo','nombre_complejo_ fronterizo');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('COD_CF','codigo_complejo_fronterizo','codigo_complejo_fronterizo');
+insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('NOM_CF','nombre_complejo_fronterizo','nombre_complejo_fronterizo');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LAT_CF','latitud_cf','latitud_cf');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('LON_CF','longitud_cf','longitud_cf');
 

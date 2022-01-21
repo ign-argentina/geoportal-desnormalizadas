@@ -11,6 +11,7 @@ Los atributos los transforma tomando datos del cat�logo IGN el cual se import�
 - atributo: atributos que no corresponden a dominios
 IMPORTANTE: Se debe informar el listado de tablas a procesar en el vector $aTablas
 *********************************/
+require_once 'LibStrings.php';
 require_once 'config.php';
 
 // Conectando y seleccionado la base de datos  
@@ -125,63 +126,3 @@ foreach ($aTablas as $sTabla) {
 
 //Ejecutar el script generado
 pg_query(file_get_contents('tablas_sig.sql')) or die('La consulta fallo: ' . pg_last_error().' <br /> '.$s);
-
-function nombreSHP2NombreTabla($sSHP) {
-	$sSHP = utf8_decode($sSHP);
-	$string = str_replace(' ', '_', $sSHP);
-	$string = strtolower($string);
-	$string = str_replace('.shp', '', $string);
-	
-	$string = trim($string);
- 
-    $string = str_replace(
-        array('á', 'à', 'ä', 'â', 'ª', 'Á', 'À', 'Â', 'Ä'),
-        array('a', 'a', 'a', 'a', 'a', 'A', 'A', 'A', 'A'),
-        $string
-    );
- 
-    $string = str_replace(
-        array('é', 'è', 'ë', 'ê', 'É', 'È', 'Ê', 'Ë'),
-        array('e', 'e', 'e', 'e', 'E', 'E', 'E', 'E'),
-        $string
-    );
- 
-    $string = str_replace(
-        array('í', 'ì', 'ï', 'î', 'Í', 'Ì', 'Ï', 'Î'),
-        array('i', 'i', 'i', 'i', 'I', 'I', 'I', 'I'),
-        $string
-    );
- 
-    $string = str_replace(
-        array('ó', 'ò', 'ö', 'ô', 'Ó', 'Ò', 'Ö', 'Ô'),
-        array('o', 'o', 'o', 'o', 'O', 'O', 'O', 'O'),
-        $string
-    );
- 
-    $string = str_replace(
-        array('ú', 'ù', 'ü', 'û', 'Ú', 'Ù', 'Û', 'Ü'),
-        array('u', 'u', 'u', 'u', 'U', 'U', 'U', 'U'),
-        $string
-    );
- 
-    $string = str_replace(
-        array('ñ', 'Ñ', 'ç', 'Ç'),
-        array('n', 'N', 'c', 'C',),
-        $string
-    );
- 
-    //Esta parte se encarga de eliminar cualquier caracter extra�o
-    $string = str_replace(
-        array('º', '-', '~',
-		'#', '@', '|', '!', '"',
-		'·', '$', '%', '&', '/',
-		'(', ')', '?', '\'', '¡',
-		'¿', '[', '^', '<code>', ']',
-		'+', '}', '{', '¨', '´',
-		'>', '< ', ';', ',', ':'),
-        '',
-        $string
-    );
-	
-	return $string;
-}

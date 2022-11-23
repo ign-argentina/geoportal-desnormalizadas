@@ -82,8 +82,7 @@ INSERT INTO atributo VALUES ('NOM_PCIA', 'nombre_provincia', 'Desnormalización 
 INSERT INTO atributo VALUES ('COD_DEPTO', 'codigo_indec_departamento', 'Desnormalización BAHRA', null, null);
 INSERT INTO atributo VALUES ('NOM_DEPTO', 'nombre_departamento', 'Desnormalización BAHRA', null, null);
 INSERT INTO atributo VALUES ('COD_ASE', 'codigo_asentamiento', 'Desnormalización BAHRA', null, null);
-INSERT INTO atributo VALUES ('NOMBRE', 'nombre_geografico', 'Desnormalización BAHRA', null, null);
-INSERT INTO atributo VALUES ('TIPO', 'tipo_asentamiento', 'Desnormalización BAHRA', null, null);
+INSERT INTO atributo VALUES ('TIPO_ASENT', 'tipo_asentamiento', 'Desnormalización BAHRA', null, null);
 INSERT INTO atributo VALUES ('COD_AGLO', 'codigo_aglomerado', 'Desnormalización BAHRA', null, null);
 INSERT INTO atributo VALUES ('NOM_AGLO', 'nombre_aglomerado', 'Desnormalización BAHRA', null, null);
 INSERT INTO atributo VALUES ('COD_AGL', 'codigo_indec_gobierno_local', 'Desnormalización BAHRA', null, null);
@@ -92,7 +91,6 @@ INSERT INTO atributo VALUES ('LAT_GD', 'latitud_grado_decimal', 'Desnormalizaci�
 INSERT INTO atributo VALUES ('LONG_GD', 'longitud_grado_decimal', 'Desnormalización BAHRA', null, null);
 INSERT INTO atributo VALUES ('LAT_GS', 'latitud_grado_sexagecimal', 'Desnormalización BAHRA', null, null);
 INSERT INTO atributo VALUES ('LONG_GS', 'longitud_grado_sexagecimal', 'Desnormalización BAHRA', null, null);
-INSERT INTO atributo VALUES ('FUENTE', 'fuente_ubicacion', 'Desnormalización BAHRA', null, null);
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values
 ('TGL','tipo_gobierno_local','Desnormalización Gobierno Local');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values

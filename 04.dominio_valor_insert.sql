@@ -88,6 +88,12 @@ INSERT INTO dominio_valor VALUES ('TZZ', -2,'No corresponde', NULL);
 INSERT INTO dominio_valor VALUES ('VLJ', -2,'No corresponde', NULL);
 INSERT INTO dominio_valor VALUES ('VLP', -2,'No corresponde', NULL);
 INSERT INTO dominio_valor VALUES ('ISIC', -2,'No corresponde', NULL);
+
+INSERT INTO dominio_valor VALUES ('TIS', -1,'Información no disponible','Cuando no se dispone o no se tiene certeza de los datos.');
+INSERT INTO dominio_valor VALUES ('TIS', 1,'Lacustre','Isla rodeada por un espejo de agua.');
+INSERT INTO dominio_valor VALUES ('TIS', 2,'Fluvial','Isla rodeada por una corriente de agua.');
+INSERT INTO dominio_valor VALUES ('TIS', 3,'Marítimo','Isla rodeada por mar.');
+
 INSERT INTO dominio_valor VALUES ('ATV', -1,'Información no disponible','Cuando no se dispone o no se tiene certeza de los datos.');
 INSERT INTO dominio_valor VALUES ('ATV', 8,'Militar','Se realizan vuelos llevados a cabo por las Fuerzas Armadas.');
 INSERT INTO dominio_valor VALUES ('ATV', 9,'Civil','Se realizan vuelos no militares.');
@@ -340,6 +346,8 @@ INSERT INTO dominio_valor VALUES ('TC1', -1,'Información no disponible','Cuando
 INSERT INTO dominio_valor VALUES ('RST', 1,'Pavimentado','Vía que posee una capa constituida por uno o más materiales, colocados sobre el terreno natural o nivelado para aumentar su resistencia y servir para la circulación de personas o vehículos. Los materiales utilizados son el hormigón y las mezclas asfálticas.');
 INSERT INTO dominio_valor VALUES ('RST', 19,'Consolidado','Vía cuya superficie está formada por una capa de material (ripio, grava, broza, conchilla, tosca) que permite la transitabilidad permanente.');
 INSERT INTO dominio_valor VALUES ('RST', 13,'Tierra','Vía cuya superficie está formada por terreno natural, sin ningún material agregado que lo consolide.');
+INSERT INTO dominio_valor VALUES ('RST', 2,'Consolidado','Vía cuya superficie está formada por una capa de material (ripio, grava, broza, conchilla, tosca) que permite la transitabilidad permanente.');
+INSERT INTO dominio_valor VALUES ('RST', 3,'Tierra','Vía cuya superficie está formada por terreno natural, sin ningún material agregado que lo consolide.');
 INSERT INTO dominio_valor VALUES ('SMC', -1,'Información no disponible','Cuando no se dispone o no se tiene certeza de los datos.');
 INSERT INTO dominio_valor VALUES ('SMC', 46,'Grava','Material constituido por la acción de acumulación marina, de un tamaño de grano mayor a la arena.');
 INSERT INTO dominio_valor VALUES ('SMC', 88,'Arena','Material granulado formado por pequeños fragmentos erosionados de roca, cuyas partículas sedimentarias son más finas que la grava y más largas que un grano de limo grueso.');

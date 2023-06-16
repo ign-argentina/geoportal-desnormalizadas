@@ -254,6 +254,41 @@ insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('ENOS
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('IVSD','indice_de_vulnerabilidad_social_frente_a_desastres_sintesis','indice_de_vulnerabilidad_social_frente_a_desastres_sintesis');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('ACELERAC','aceleracion_maxima_del_suelo','aceleracion_maxima_del_suelo');
 insert into desnormalizacion.atributo (codigo,etiqueta,definicion) values ('P_SISMICA','peligrosidad_sismica','peligrosidad_sismica');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('NOM_BARRIO','nombre_barrio');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('CANT_VIV','cantidad_viviendas_aproximadas');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('CANT_FAM','cantidad_familias_aproximada');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('ENERGIA_EL','energia_electrica');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('EFLUENTE_C','efluentes_cloacales');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('AGUA_CORRI','agua_corriente');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('CALEFAC','calefaccion');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('SITUA_DOMI','situacion_dominial');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('CLAS_BAR','clasificacion_barrio');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('COTA_A','cota_alerta');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('COTA_E','cota_evacuacion');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('COMU_ID','comunidad_id');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('COMU_NOM','comunidad_nombre');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('COMU_PUE','comunidad_pueblo');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('COM_PU_REF','comunidad_pueblo_referencia');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('PER_JUR_ES','personeria_juridica_estado');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('PER_T_INSC','personeria_tipo_inscripcion');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('PER_NUM_IN','personeria_numero_inscripcion');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('PER_FE_INS','personeria_fecha_inscripcion');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('PER_RE_INS','personeria_registro_inscripcion');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('REL_ESTADO','relevamiento_estado');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('REL_FECH','relevamiento_fecha');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('RE_RS_INAI','relevamiento_resolucion_inai');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('REL_FE_RES','relevamiento_fecha_resolucion');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('TIPO_MOV','tipo_de_movimiento');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('TOTVPART','total_vivienda_particular_indec');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('TOTVCOL','total_vivienda_colectiva_indec');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('TOTPOBLA','total_poblacion_indec');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('TPVPART','total_poblacion_vivienda_particular_indec');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('TPVCOL','total_poblacion_vivienda_colectiva_indec');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('TPSCALLE','total_poblacion_situacion_calle_indec_incompleto');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('TPVPSC','total_poblacion_en_vivienda_particular_incluye_situacion_calle_indec');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('MFTVP','total_mujer_femenino_en_vivienda_particular_incluye_situacion_calle_indec');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('VMTVP','total_varon_masculino_en_vivienda_particular_incluye_situacion_calle_indec');
+INSERT INTO desnormalizacion.atributo (codigo,etiqueta) VALUES ('OXTVP','total_x_otre_en_vivienda_particular_incluye_situacion_calle_indec');
 
 
 -- Completed on 2019-05-02 14:48:43
